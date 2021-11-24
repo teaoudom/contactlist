@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, Text, ActivityIndicator, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -14,11 +15,6 @@ const CustomButton = ({
   onPress,
   style,
 }) => {
-  const styleTextLoading = StyleSheet.create({
-    color: disabled ? 'black' : colors.white,
-    paddingLeft: loading ? 5 : 0,
-  });
-
   const getBgColor = () => {
     if (disabled) {
       return colors.grey;
@@ -46,7 +42,11 @@ const CustomButton = ({
           />
         )}
         {title && (
-          <Text style={styleTextLoading}>
+          <Text
+            style={{
+              color: disabled ? 'black' : colors.white,
+              paddingLeft: loading ? 5 : 0,
+            }}>
             {loading ? 'Please wait...' : title}
           </Text>
         )}
