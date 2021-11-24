@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React, {useEffect, useState, useRef, useContext} from 'react';
 import {ActivityIndicator, Alert, TouchableOpacity, View} from 'react-native';

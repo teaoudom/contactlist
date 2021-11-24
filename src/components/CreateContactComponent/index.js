@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, Text, Switch, Image, TouchableOpacity} from 'react-native';
 import Container from '../common/Container';

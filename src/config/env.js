@@ -9,3 +9,6 @@ const prodEnvironmentVariables = {
 };
 
 export default __DEV__ ? devEnvironmentVariables : prodEnvironmentVariables;
+
+//DEV_BACKEND_URL=https://truly-contacts.herokuapp.com/api
+//PROD_BACKEND_URL=http://prod.truly-contacts.herokuapp.com/api

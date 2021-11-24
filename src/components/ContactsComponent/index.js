@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {useNavigation} from '@react-navigation/native';
 import React, {useRef} from 'react';
 import {
@@ -39,13 +40,8 @@ const ContactsComponent = ({sortBy, data, loading, setModalVisible}) => {
   };
 
   const renderItem = ({item}) => {
-    const {
-      contact_picture,
-      first_name,
-      country_code,
-      phone_number,
-      last_name,
-    } = item;
+    const {contact_picture, first_name, country_code, phone_number, last_name} =
+      item;
 
     const renderLeftActions = (progress, dragX) => {
       return (

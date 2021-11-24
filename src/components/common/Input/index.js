@@ -43,6 +43,7 @@ const Input = ({
       <View
         style={[
           styles.wrapper,
+          // eslint-disable-next-line react-native/no-inline-styles
           {alignItems: icon ? 'center' : 'baseline'},
           {borderColor: getBorderColor(), flexDirection: getFlexDirection()},
         ]}>

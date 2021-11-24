@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, Text, TextInput, ActivityIndicator} from 'react-native';
+import {View, Text, ActivityIndicator, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {color} from 'react-native-reanimated';
 import colors from '../../../assets/theme/colors';
 import styles from './styles';
 
@@ -15,6 +14,11 @@ const CustomButton = ({
   onPress,
   style,
 }) => {
+  const styleTextLoading = StyleSheet.create({
+    color: disabled ? 'black' : colors.white,
+    paddingLeft: loading ? 5 : 0,
+  });
+
   const getBgColor = () => {
     if (disabled) {
       return colors.grey;
@@ -42,11 +46,7 @@ const CustomButton = ({
           />
         )}
         {title && (
-          <Text
-            style={{
-              color: disabled ? 'black' : colors.white,
-              paddingLeft: loading ? 5 : 0,
-            }}>
+          <Text style={styleTextLoading}>
             {loading ? 'Please wait...' : title}
           </Text>
         )}

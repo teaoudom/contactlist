@@ -1,16 +1,17 @@
+/* eslint-disable react-native/no-inline-styles */
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {
   View,
   Text,
-  FlatList,
+  //FlatList,
   TouchableOpacity,
-  ActivityIndicator,
+  //ActivityIndicator,
   Image,
   ScrollView,
 } from 'react-native';
 import colors from '../../assets/theme/colors';
-import {CONTACT_DETAIL, CREATE_CONTACT} from '../../constants/routeNames';
+import {CREATE_CONTACT} from '../../constants/routeNames'; //CONTACT_DETAIL,
 import Icon from '../common/Icon';
 import CustomButton from '../common/CustomButton';
 import styles from './styles';
@@ -29,13 +30,8 @@ const ContactDetailsComponent = ({
 }) => {
   const {navigate} = useNavigation();
 
-  const {
-    contact_picture,
-    first_name,
-    country_code,
-    phone_number,
-    last_name,
-  } = contact;
+  const {contact_picture, first_name, country_code, phone_number, last_name} =
+    contact;
 
   return (
     <ScrollView style={styles.scrollView}>
